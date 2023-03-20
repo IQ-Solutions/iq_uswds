@@ -1,0 +1,28 @@
+{
+  "name": "iq/cecc_base",
+  "description": "Base CECC Theme",
+  "type": "drupal-custom-theme",
+  "keywords": [
+    "Drupal"
+  ],
+  "homepage": "https://github.com/IQ-Solutions/iq_uswds",
+  "authors": [
+    {
+      "name": "William Hurley",
+      "role": "Maintainer",
+      "email": "whurley@iqsolutions.com"
+    },
+    {
+      "name": "Kevin L Rice",
+      "role": "Maintainer",
+      "email": "krice@iqsolutions.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/IQ-Solutions/iq_uswds/issues",
+    "source": "https://github.com/IQ-Solutions/iq_uswds"
+  },
+  "require": {
+    "drupal/uswds_base": "^3"
+  }
+}

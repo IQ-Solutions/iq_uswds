@@ -1,0 +1,11 @@
+# Node modules
+node_modules
+
+# Fractal public
+public
+
+# Fractal build
+build
+
+# USWDS assets
+assets/uswds

@@ -1,0 +1,64 @@
+{
+  "name": "iq_uswds",
+  "version": "0.0.0",
+  "description": "Base IQ USWDS theme for architecture and tooling",
+  "main": "index.js",
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "maintained node versions",
+    "ie 8-11"
+  ],
+  "postcss": {
+    "map": "absolute",
+    "plugins": {
+      "cssnano": {
+        "preset": "advanced"
+      },
+      "autoprefixer": {}
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:fractal": "NODE_OPTIONS='--inspect 0.0.0.0:9229' fractal start --watch --sync",
+    "fractal": "fractal",
+    "gulp": "gulp",
+    "build": "gulp build",
+    "build:fractal": "gulp fractal:build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IQ-Solutions/iq_uswds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IQ-Solutions/iq_uswds/issues"
+  },
+  "homepage": "https://github.com/IQ-Solutions/iq_uswds#readme",
+  "dependencies": {
+    "@uswds/uswds": "^3.4.1"
+  },
+  "devDependencies": {
+    "@frctl/fractal": "^1.5.15",
+    "@frctl/mandelbrot": "^1.10.3",
+    "@netzstrategen/fractal-twig": "git+https://github.com/IQ-Solutions/fractal-twig.git#master",
+    "@uswds/compile": "^1.0.0",
+    "@wondrousllc/fractal-twig-drupal-adapter": "^1.3.1",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^5.1.15",
+    "cssnano-preset-advanced": "^5.3.10",
+    "gulp": "^4.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-load-config": "^4.0.1",
+    "sass": "^1.59.3",
+    "twig": "<1.14",
+    "twing": "^5.1.2"
+  }
+}
