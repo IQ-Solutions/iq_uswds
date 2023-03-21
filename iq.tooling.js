@@ -1,7 +1,10 @@
-const { src, dest, series, parallel, watch, task } = require("gulp");
+const { src, dest, task } = require("gulp");
 const fractal = require('./fractal.config.js');
 
 const logger = fractal.cli.console;
+
+// Images destination
+const IMG_DEST = "./assets/img";
 
 function startFractal() {
   const server = fractal.web.server({
@@ -22,5 +25,10 @@ function buildFractal () {
   });
 }
 
-exports.startFractal = task(startFractal);
-exports.buildFractal = task(buildFractal);
+function copyImages() {
+  return src(`./src/images/**/**`).pipe(dest(`${IMG_DEST}`));
+}
+
+exports.startFractal = task('fractal:start', startFractal);
+exports.buildFractal = task('fractal:build', buildFractal);
+exports.copyImages = task('images:copy', copyImages);

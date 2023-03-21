@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <link media="all" rel="stylesheet" href="{{ '/fractal/css/styles.css' }}">
+  <script src="/fractal/js/uswds-init.js"></script>
+	<title>Preview Layout</title>
+</head>
+<body>
+	{{ yield }}
+
+  <script src="/fractal/js/uswds.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      document.body.addEventListener('submit', function(e) {
+        // https://github.com/uswds/uswds/issues/2101
+        e.preventDefault();
+      }, true);
+    }, false);
+  </script>
+</body>
+</html>

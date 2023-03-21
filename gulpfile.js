@@ -22,8 +22,9 @@ uswds.paths.dist.theme = './src/scss';
  * Exports
  * Add as many as you need
  */
-
 exports.init = uswds.init;
 exports.compile = uswds.compile;
 exports.watch = uswds.watch;
-exports.fractal = series(uswds.compileSass, parallel(uswds.watch, iqTooling.startFractal))
+exports.fractal = series(uswds.compileSass, parallel(uswds.watch, 'fractal:start'));
+exports.build = parallel(uswds.compile, 'images:copy');
+exports.copyUswds = uswds.copyAll;

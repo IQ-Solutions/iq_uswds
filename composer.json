@@ -1,6 +1,6 @@
 {
-  "name": "iq/cecc_base",
-  "description": "Base CECC Theme",
+  "name": "iq/iq_uswds",
+  "description": "Base IQ USWDS Theme",
   "type": "drupal-custom-theme",
   "keywords": [
     "Drupal"

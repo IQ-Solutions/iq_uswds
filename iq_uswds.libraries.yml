@@ -1,0 +1,8 @@
+assets:
+  css:
+    theme:
+      assets/css/styles.css: { minified: false }
+
+uswds:
+  js:
+    assets/uswds/js/uswds.min.js: { minified: true }
