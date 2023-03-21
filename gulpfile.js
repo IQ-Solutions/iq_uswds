@@ -1,6 +1,8 @@
 /* gulpfile.js */
 
 const uswds = require("@uswds/compile");
+const { series, parallel } = require("gulp");
+const iqTooling = require("./iq.tooling");
 
 /**
  * USWDS version
@@ -23,3 +25,5 @@ uswds.paths.dist.theme = './src/scss';
 
 exports.init = uswds.init;
 exports.compile = uswds.compile;
+exports.watch = uswds.watch;
+exports.fractal = series(uswds.compileSass, parallel(uswds.watch, iqTooling.startFractal))

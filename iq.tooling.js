@@ -1,4 +1,4 @@
-const { src, dest, series, parallel, watch } = require("gulp");
+const { src, dest, series, parallel, watch, task } = require("gulp");
 const fractal = require('./fractal.config.js');
 
 const logger = fractal.cli.console;
@@ -17,7 +17,10 @@ function buildFractal () {
   const builder = fractal.web.builder();
   builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
   builder.on('error', err => logger.error(err.message));
-  return builder.build().then(() => {
+  return builder.start().then(() => {
     logger.success('Fractal build completed!');
   });
 }
+
+exports.startFractal = task(startFractal);
+exports.buildFractal = task(buildFractal);
