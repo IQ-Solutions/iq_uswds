@@ -6,6 +6,10 @@ const logger = fractal.cli.console;
 // Images destination
 const IMG_DEST = "./assets/img";
 
+function inititateIqUswds() {
+
+}
+
 function startFractal() {
   const server = fractal.web.server({
     sync: true

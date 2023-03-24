@@ -42,7 +42,7 @@
   "devDependencies": {
     "@frctl/fractal": "^1.5.15",
     "@frctl/mandelbrot": "^1.10.3",
-    "@netzstrategen/fractal-twig": "git+https://github.com/IQ-Solutions/fractal-twig.git#master",
+    "@iq-solutions/fractal-twing": "^0.1.3",
     "@uswds/compile": "^1.0.0",
     "@wondrousllc/fractal-twig-drupal-adapter": "^1.3.1",
     "autoprefixer": "^10.4.14",
@@ -55,6 +55,7 @@
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "jshint": "^2.13.6",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-load-config": "^4.0.1",
