@@ -25,7 +25,8 @@
     "gulp": "gulp",
     "build": "gulp build",
     "build:fractal": "gulp fractal:build",
-    "copy:uswds": "gulp copy:uswds"
+    "copy:uswds": "gulp copy:uswds",
+    "images:copy": "gulp copy:images"
   },
   "repository": {
     "type": "git",

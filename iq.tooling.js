@@ -1,5 +1,5 @@
 const { src, dest, task } = require("gulp");
-const uswds = require("@uswds/compile");
+const uswds = require("./node_modules/@uswds/compile");
 const log = console.log;
 const fractal = require('./fractal.config.js');
 
