@@ -24,7 +24,8 @@
     "fractal": "fractal",
     "gulp": "gulp",
     "build": "gulp build",
-    "build:fractal": "gulp fractal:build"
+    "build:fractal": "gulp fractal:build",
+    "copy:uswds": "gulp copy:uswds"
   },
   "repository": {
     "type": "git",

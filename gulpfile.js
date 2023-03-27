@@ -1,30 +1,17 @@
 /* gulpfile.js */
 
-const uswds = require("@uswds/compile");
-const { series, parallel } = require("gulp");
+const { series, parallel, task } = require("gulp");
 const iqTooling = require("./iq.tooling");
-
-/**
- * USWDS version
- */
-
-uswds.settings.version = 3;
-
-/**
- * Path settings
- * Set as many as you need
- */
-
-uswds.paths.dist.css = './assets/css';
-uswds.paths.dist.theme = './src/scss';
 
 /**
  * Exports
  * Add as many as you need
  */
-exports.init = uswds.init;
-exports.compile = uswds.compile;
-exports.watch = uswds.watch;
-exports.fractal = series(uswds.compileSass, parallel(uswds.watch, 'fractal:start'));
-exports.build = parallel(uswds.compile, 'images:copy');
-exports.copyUswds = uswds.copyAll;
+exports.compile = iqTooling.compile;
+exports.watch = iqTooling.watch;
+exports.fractal = task('fractal', series(
+  iqTooling.compileSass,
+  parallel(iqTooling.watch, "fractal:start")
+));
+exports.build = parallel(iqTooling.compile, "images:copy");
+exports.copyUswds = task('copy:uswds', iqTooling.copyAll);
