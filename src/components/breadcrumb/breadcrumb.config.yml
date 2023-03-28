@@ -1,0 +1,10 @@
+title: Breadcrumbs
+label: Breadcrumbs
+handle: breadcrumb
+context:
+  breadcrumb:
+    -
+      text: Home
+      url: '/'
+    -
+      text: Test Page

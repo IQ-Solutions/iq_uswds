@@ -1,0 +1,43 @@
+name: Header
+label: Header
+context:
+  uswds_images: /fractal/img/
+  footer_style: medium
+  display_footer_secondary: true
+  display_footer_agency: true
+  government_banner: '@@banner'
+  header_classes: usa-header
+  page:
+    primary_menu: '@@menus'
+    branding: '@@branding'
+    header_search: '@@search'
+  attributes: {}
+
+variants:
+  - name: default
+    label: Compare
+    status: null
+  - name: basic
+    label: Basic header
+  - name: basic-mega
+    label: Basic with mega-menu
+    context:
+      page:
+        primary_menu: '@@menus--megamenu'
+  - name: extended
+    label: Extended header
+    context:
+      header_classes: usa-header usa-header--extended
+      header_extended: true
+      page:
+        secondary_menu: '@@menus--secondary'
+        search: '@@search'
+  - name: extended-mega
+    label: Extended with mega-menu
+    context:
+      header_classes: usa-header usa-header--extended
+      header_extended: true
+      page:
+        secondary_menu: '@@menus--secondary'
+        search: '@@search'
+        primary_menu: '@@menus--megamenu'

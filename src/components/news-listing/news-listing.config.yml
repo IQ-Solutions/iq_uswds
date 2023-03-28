@@ -1,0 +1,20 @@
+label: News Listing
+status: ready
+
+variants:
+  - name: default
+    label: Homepage Latest News
+    context:
+      items:
+        - '@@news-listing--news'
+        - '@@news-listing--news'
+        - '@@news-listing--news'
+        - '@@news-listing--news'
+
+  - name: news
+    label: News Piece
+    context:
+      title: 'Women-owned small business dashboard'
+      date: '<time datetime="2020-09-30T12:00:00+01:00">September 30, 2020</time>'
+      topic: '<a href="/news/research-highlights">Research Highlights</a>'
+      url: '/news/nia-directors-regional-meeting-2022'

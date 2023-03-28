@@ -1,0 +1,106 @@
+label: Collection
+status: ready
+context:
+  items:
+  - title: Gears of Government President’s Award winners
+    url: https://trumpadministration.archives.performance.gov/presidents-winners-press-release/
+    image:
+      url: https://trumpadministration.archives.performance.gov/img/GoG/GoG-logo.png
+      alt: Gears of Government Awards - President's Award
+    description: Today, the Administration announces the winners of the Gears of Government President’s Award. This program recognizes the contributions of individuals and teams across the federal workforce who make a profound difference in the lives of the American people.
+    meta:
+      - By Sondra Ainsworth and Constance Lu
+      - '<time datetime="2020-09-30T12:00:00+01:00">September 30, 2020</time>'
+    tags:
+    - label: New
+      class: usa-tag--new
+  - title: Women-owned small business dashboard
+    url: https://trumpadministration.archives.performance.gov/sba-wosb-dashboard/
+    image:
+      url: https://www.performance.gov/img/blog/wosb1.jpg
+      alt: Woman Owned Small Business Federal Contracts
+    description: In honor of National Women’s Small Business Month, we’ve partnered with SBA’s Office of Government Contracting and Business Development and Office of Program Performance, Analysis, and Evaluation to highlight the Women-Owned Small Businesses (WOSBs) data dashboard!
+    meta:
+      - By Constance Lu
+      - '<time datetime="2020-09-30T12:00:00+01:00"> September 30, 2020</time>'
+    tags:
+    -
+      label: SBA
+  - title: September 2020 updates show progress on cross-agency and agency priority goals
+    url: https://trumpadministration.archives.performance.gov/September-2020-Updates-Show-Progress/
+    image:
+      url: https://www.performance.gov/img/blog/sept-2020.png
+      alt: September 2020 Updates
+    description: Today, we published progress updates for both Cross-Agency Priority (CAP) Goals and Agency Priority Goals (APGs) for the third quarter of FY2020. These updates highlight recent milestones and accomplishments as well as related initiatives that support progress towards a more modern and effective government.
+    meta:
+      - By Eric L. Miller
+      - '<time datetime="2020-09-17T12:00:00+01:00">September 17, 2020</time>'
+    tags:
+    -
+      label: Quarterly update
+    -
+      label: CAP goal
+    -
+      label: APG
+    -
+      label: PMA
+    -
+      label: Success story
+variants:
+- name: only-headers
+  context:
+    items:
+    - title: Gears of Government President’s Award winners
+      url: https://trumpadministration.archives.performance.gov/presidents-winners-press-release/
+      image:
+        url: https://trumpadministration.archives.performance.gov/img/GoG/GoG-logo.png
+        alt: Gears of Government Awards - President's Award
+      description: Today, the Administration announces the winners of the Gears of Government President’s Award. This program recognizes the contributions of individuals and teams across the federal workforce who make a profound difference in the lives of the American people.
+      meta:
+      - icon: '<svg class="usa-icon position-relative bottom-neg-2px" aria-hidden="true" role="img"><use xlink:href="/img/sprite.svg#public"></use></svg>'
+        label: Digital.gov
+    - title: Women-owned small business dashboard
+      url: https://trumpadministration.archives.performance.gov/sba-wosb-dashboard/
+      image:
+        url: https://www.performance.gov/img/blog/wosb1.jpg
+        alt: Woman Owned Small Business Federal Contracts
+      description: In honor of National Women’s Small Business Month, we’ve partnered with SBA’s Office of Government Contracting and Business Development and Office of Program Performance, Analysis, and Evaluation to highlight the Women-Owned Small Businesses (WOSBs) data dashboard!
+    - title: September 2020 updates show progress on cross-agency and agency priority goals
+      url: https://trumpadministration.archives.performance.gov/September-2020-Updates-Show-Progress/
+      image:
+        url: https://www.performance.gov/img/blog/sept-2020.png
+        alt: September 2020 Updates
+      description: Today, we published progress updates for both Cross-Agency Priority (CAP) Goals and Agency Priority Goals (APGs) for the third quarter of FY2020. These updates highlight recent milestones and accomplishments as well as related initiatives that support progress towards a more modern and effective government.
+      meta:
+      - icon: '<svg class="usa-icon position-relative bottom-neg-2px" aria-hidden="true" role="img"><use xlink:href="/img/sprite.svg#public"></use></svg>'
+        label: U.S. Web Design System
+- name: homepage
+  context:
+    title: Homepage Collection Container
+    body: '<p>Today, we published progress updates for both Cross-Agency Priority (CAP) Goals and Agency Priority Goals (APGs) for the third quarter of FY2020. These updates highlight recent milestones and accomplishments as well as related initiatives that support progress towards a more modern and effective government.</p>'
+    collections:
+      - '@@collection--homepage-collection'
+      - '@@collection--homepage-collection'
+      - '@@collection--homepage-collection'
+      - '@@collection--homepage-collection'
+- name: homepage-collection
+  context:
+    title: Collection Number
+    body: '<p>Today, the Administration announces the winners of the Gears of Government President’s Award. This program recognizes the contributions of individuals and teams across the federal workforce who make a profound difference in the lives of the American people.</p>'
+    cta_link: /news/research-highlights
+    cta_text: More health information
+    items:
+      - '@@collection--homepage-collection-item'
+      - '@@collection--homepage-collection-item'
+      - '@@collection--homepage-collection-item'
+      - '@@collection--homepage-collection-item'
+
+- name: homepage-collection-item
+  label: Homepage Collection Item
+  context:
+    title: Gears of Government President’s Award winners
+    date: '<time datetime="2020-09-30T12:00:00+01:00">September 30, 2020</time>'
+    topic: '<a href="/news/research-highlights">Research Highlights</a>'
+    url: /news/nia-directors-regional-meeting-2022
+    description: Get information about applying for funding from the NIA.
+    media: <img class="usa-collection__img" src="https://www.performance.gov/img/blog/sept-2020.png" alt="A placeholder image">

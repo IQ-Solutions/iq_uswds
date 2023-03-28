@@ -1,0 +1,46 @@
+label: Text elements
+context:
+  headers:
+  - tag: h1
+    label: Header 1
+  - tag: h2
+    label: Header 2
+  - tag: h3
+    label: Header 3
+  - tag: h4
+    label: Header 4
+  - tag: h5
+    label: Header 5
+  - tag: h6
+    label: Header 6
+  text_content:
+  - tag: blockquote
+    label: Blockquote
+  - tag: dd
+    label: Definition
+  - tag: figcaption
+    label: Figure caption
+  - tag: pre
+    label: Preformated
+  - tag: abbr
+    label: Abbreviation
+  - tag: b
+    label: Bold
+  - tag: cite
+    label: Citation
+  - tag: code
+    label: code
+  - tag: em
+    label: Emphasis
+  - tag: q
+    label: Quotation
+  - tag: s
+    label: Strikethrough
+  - tag: sub
+    label: Subscript
+  - tag: sup
+    label: Superscript
+  - tag: u
+    label: Underline
+  - tag: var
+    label: Variables

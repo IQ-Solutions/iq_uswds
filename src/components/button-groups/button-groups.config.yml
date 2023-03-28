@@ -1,0 +1,15 @@
+label: Button groups
+status: ready
+
+variants:
+  - name: default
+    label: Default
+    context:
+      label:
+        classes: "usa-button-group"
+
+  - name: segmented
+    label: Segmented
+    context:
+      label:
+        classes: "usa-button-group usa-button-group--segmented"

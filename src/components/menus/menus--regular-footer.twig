@@ -1,0 +1,3 @@
+{# directly import regular footer menu instead of extending which breaks fractal #}
+{% import "@components/menus/menu--regular-footer_menu.twig" as menus %}
+{{ menus.menu_links(items, 0, 'medium') }}

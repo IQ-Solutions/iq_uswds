@@ -1,0 +1,21 @@
+{% extends '@components/header/header.html.twig' %}
+
+{% block header %}
+  {% include '@components/layouts/region--header.twig' with {
+    content: page.branding,
+    region: 'header'
+  }%}
+{% endblock %}
+
+{% block header_search %}
+  <div class="grid-container header-site-search padding-2">
+    {{ page.search }}
+  </div>
+{% endblock %}
+
+{% block secondary_menu %}
+  <div class='usa-nav__secondary'>
+    {{ page.secondary_menu }}
+    {{ page.search }}
+  </div>
+{% endblock %}

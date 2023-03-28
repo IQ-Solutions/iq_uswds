@@ -1,0 +1,16 @@
+{% extends '@components/layouts/page.html.twig' %}
+
+{% block header %}
+  {{ page.header }}
+{% endblock %}
+
+{% block content %}
+  <div class="usa-layout-docs__main desktop:grid-col-{% if page.sidebar_first or page.sidebar_second %}9{% else %}fill{% endif %}">
+    {{ page.title }}
+    {{ page.node }}
+  </div>{# /.layout-content #}
+{% endblock %}
+
+{% block footer %}
+  {{ page.footer }}
+{% endblock %}

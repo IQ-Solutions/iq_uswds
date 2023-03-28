@@ -1,0 +1,95 @@
+label: Callout
+status: ready
+context:
+  attributes:
+    class:
+      - desktop:grid-col-12
+      - usa-card
+  title: Looking for information on Alzheimer's and Related Dementia?
+  classes: "desktop:grid-col-12"
+  callout_color: blue
+  media_element: ""
+  media_location: left
+  body: >
+    Contact the Alzheimer's Disease Education and Referral (ADEAR)
+    center at 800-438-4380 or email at adear@nia.nih.gov.
+  links:
+    - <a href="tel:800-444-9900" class="ally-focus-within">Call Us</a>
+    - <a href="tel:800-444-9900" class="ally-focus-within">Call Us</a>
+variants:
+  - name: callout-blue
+    label: Callout-blue
+    context:
+      title: Looking for information on Alzheimer's and Related Dementia?
+      callout_color: blue
+      links:
+        - <a href="tel:800-444-9900" class="ally-focus-within">Call Us</a>
+        - <a href="tel:800-444-9900" class="ally-focus-within">Call Us</a>
+
+  - name: callout-blue-media-right
+    label: Callout-blue media right inset
+    context:
+      title: Callout media right inset
+      media_location: right
+
+  - name: callout-blue-media-left
+    label: Callout-blue media left inset
+    context:
+      title: Callout media left inset
+      media_element: <img src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg" alt="A placeholder image">
+
+  - name: callout-gray
+    label: Callout-gray no image
+    context:
+      title: Looking for information on Alzheimer's and Related Dementia?
+      callout_color: gray
+      links:
+        - <a href="tel:800-444-9900" class="ally-focus-within">Call Us</a>
+        - <a href="tel:800-444-9900" class="ally-focus-within">Call Us</a>
+  - name: callout-gray-media-right
+    label: Callout-gray media right inset
+    context:
+      title: Callout media right inset
+      callout_color: gray
+      media_element: <img src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg" alt="A placeholder image">
+      media_location: right
+      links:
+        - <a href="tel:800-444-9900" class="ally-focus-within">Call Us</a>
+        - <a href="tel:800-444-9900" class="ally-focus-within">Call Us</a>
+  - name: callout-gray-media-left
+    label: Callout-gray media left inset
+    context:
+      title: Callout media left inset
+      callout_color: gray
+      media_element: <img src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg" alt="A placeholder image">
+      media: true
+      media_location: left
+      body: >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      links:
+        - <a href="tel:800-444-9900" class="ally-focus-within">Call Us</a>
+        - <a href="tel:800-444-9900" class="ally-focus-within">Call Us</a>
+  - name: callout-inline gray
+    view: callout--inline.twig
+    label: Callout-inline gray
+    context:
+      title: Looking for information on Alzheimer's and Related Dementia?
+      classes: "custom-callout__gray"
+      body: >
+        Contact the Alzheimer's Disease Education and Referral (ADEAR) center at 800-438-4380 or email at adear@nia.nih.gov.
+  - name: callout-inline gray
+    view: callout--inline.twig
+    label: Callout-inline gray
+    context:
+      title: Callout inline blue
+      classes: "custom-callout__blue"
+      body: >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  - name: callout-blockquote
+    view: callout--blockquote.twig
+    label: Callout-blockquote
+    context:
+      quote: >
+        Our vision is to enable all Americans to enjoy robust health and independence with advancing age.
+      classes: "custom-callout__gray"
+      quote_attribute: Richard J. Hodes, M.D.

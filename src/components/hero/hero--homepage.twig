@@ -1,0 +1,20 @@
+<section class="usa-hero" aria-label="Introduction" style="background-image:url({{ background }})">
+  <div class="hero-homepage__container">
+   <div class="hero-homepage">
+    <div class="usa-hero__callout hero-homepage">
+      <h1 class="usa-hero__heading">
+        {%- if callout -%}
+          <span class="usa-hero__heading--alt">{{ callout }}</span>
+        {%- endif -%}
+        {{ title }}
+      </h1>
+      {%- if body_content -%}
+        {{ body_content }}
+      {%- endif -%}
+      {%- if button -%}
+        <a class="usa-button" href="{{ href }}">{{ text }}</a>
+      {%- endif %}
+    </div>
+  </div>
+  </div>
+</section>

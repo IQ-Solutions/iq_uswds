@@ -1,0 +1,13 @@
+title: Branding
+label: Branding
+handle: branding
+context:
+  site_logo: /fractal/img/logo_nih-nia.svg
+  site_name:
+  site_slogan:
+  site_front_url: '#'
+  attributes:
+    id: block-nia-branding
+    class:
+      - col-8-left
+      - block-logo

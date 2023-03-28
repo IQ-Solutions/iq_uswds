@@ -1,0 +1,65 @@
+{#
+/**
+ * @file alert.html.twig
+ * Default theme implementation to present Alert data.
+ *
+ * This template is used when viewing Alert pages.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ * - dissmissable: Whether this content can be dismissed by the user.
+ * - dismiss_timer: When the alert will automatically be dismissed (if ever).
+ *
+ * @see template_preprocess_alert()
+ *
+ * @ingroup themeable
+ */
+#}
+{# <div{{attributes}}>
+	<div class="alert-block clearfix">
+		<div class="usa-alert usa-alert--{{ type }}">
+			<div class="alert-block usa-alert__body grid-row">
+				<div class="grid-col-11 grid-row grid-gap-6">
+					{% if content %}
+						<h4 class="usa-alert__heading grid-col-auto">
+							{{ title }}</h4>
+						<div class="grid-col-9">
+							{{ body }}
+						</div>
+					{% endif %}
+				</div>
+				<div class="grid-col-1">
+					{% if dismissable %}
+						<button class="alert-box--close alert--close" id="alert--box-close_button">x</button>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div> #}
+
+<div{{attributes}}>
+	<div class="alert-block clearfix">
+		<div class="usa-alert usa-alert--{{ type }}">
+			<div class="alert-block usa-alert__body grid-row">
+<div class="grid-col-12 grid-row .grid-gap-sm">
+
+					<div class="grid-col-11">
+						{% if content %}
+							<h4 class="usa-alert__heading">{{ title }}</h4>
+							<div class="usa-alert__text">
+								{{ body }}
+							</div>
+						</div>
+					{% endif %}
+        <div class="grid-col-1 text-right">
+	      {% if dismissable %}
+		     <button class="alert-box--close alert--close" id="alert--box-close_button">x</button>
+      	{% endif %}
+        </div>
+      </div>
+			</div>
+		</div>
+	</div>
+</div>

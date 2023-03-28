@@ -1,0 +1,22 @@
+label: Page layouts
+status: ready
+context:
+  uswds_images: /fractal/img/
+  footer_style: medium
+  display_footer_secondary: true
+  display_footer_agency: true
+  government_banner: '@@banner'
+  header_classes: usa-header
+  page:
+    breadcrumb: '@@breadcrumb'
+    header: '@@header--extended-mega'
+    content: '<div>Page</div>'
+    title: '@@page-title'
+    node: '@@content--node'
+    sidebar_first: '@@menus--sidebar'
+    footer: '@@footer--non-topics'
+    identifier: '@@identifier--no-logos'
+
+
+
+
