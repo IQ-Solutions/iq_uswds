@@ -13,5 +13,5 @@ exports.fractal = task('fractal', series(
   iqTooling.compileSass,
   parallel(iqTooling.watch, "fractal:start")
 ));
-exports.build = parallel(iqTooling.compile, "images:copy");
+exports.build = parallel(iqTooling.compile, "copy:images");
 exports.copyUswds = task('copy:uswds', iqTooling.copyAll);

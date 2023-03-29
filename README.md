@@ -4,6 +4,14 @@ site building effort.
 
 IQ USWDS will install necessary tooling for compiling custom site code and USWDS code as one file, and for using Fractal to build and preview the site.
 
+## Expected Local Configuration
+There are the minimum requirements to successfully use IQ USWDS locally:
+* WSL with Ubuntu 20.04 or equivalent.
+* NVM
+* Github Auth Tokens generated and available to your local terminal profile.
+
+If you are missing any of these configurations please speak with your project tech lead or a senior dev.
+
 ## How to use
 ### Installation
 1. Add the package repo to the repositories section of your composer.json as seen here:
