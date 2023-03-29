@@ -1,9 +1,9 @@
 fractal:
   themePath: ./
   project_title: IQ USWDS
-  component_path: /src/components
-  assets_path: /assets
-  build_path: /build
+  component_path: ./src/components
+  assets_path: ./assets
+  build_path: ./build
   basePath: ./
   uswds_path: templates
   template_path: templates
