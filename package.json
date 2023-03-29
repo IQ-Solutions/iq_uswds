@@ -25,7 +25,7 @@
     "gulp": "gulp",
     "build": "gulp build",
     "build:fractal": "gulp fractal:build",
-    "copy:uswds": "gulp copy:uswds",
+    "copy:uswds": "gulp uswds:copyAssets",
     "copy:images": "gulp copy:images"
   },
   "repository": {

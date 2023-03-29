@@ -7,11 +7,8 @@ const iqTooling = require("./iq.tooling");
  * Exports
  * Add as many as you need
  */
-exports.compile = iqTooling.compile;
-exports.watch = iqTooling.watch;
 exports.fractal = task('fractal', series(
-  iqTooling.compileSass,
-  parallel(iqTooling.watch, "fractal:start")
+  "uswds:compileSass",
+  parallel("uswds:watch", "fractal:start")
 ));
-exports.build = parallel(iqTooling.compile, "copy:images");
-exports.copyUswds = task('copy:uswds', iqTooling.copyAll);
+exports.build = parallel("uswds:compile", "copy:images");

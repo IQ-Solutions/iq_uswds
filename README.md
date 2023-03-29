@@ -2,7 +2,8 @@
 This package is meant to serve as the base tooling and architecture for IQ's USWDS
 site building effort.
 
-IQ USWDS will install necessary tooling for compiling custom site code and USWDS code as one file, and for using Fractal to build and preview the site.
+IQ USWDS will install necessary tooling for compiling custom site code and USWDS
+code as one file, and for using Fractal to build and preview the site.
 
 ## Expected Local Configuration
 There are the minimum requirements to successfully use IQ USWDS locally:
@@ -10,7 +11,8 @@ There are the minimum requirements to successfully use IQ USWDS locally:
 * NVM
 * Github Auth Tokens generated and available to your local terminal profile.
 
-If you are missing any of these configurations please speak with your project tech lead or a senior dev.
+If you are missing any of these configurations please speak with your project
+tech lead or a senior dev.
 
 ## How to use
 ### Installation
