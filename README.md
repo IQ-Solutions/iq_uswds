@@ -27,13 +27,18 @@ tech lead or a senior dev.
 3. Navigate to the IQ USWDS Folder and run
    1. `nvm use` - This will install and switch to the necessary version of Node and NPM.
    2. `npm ci` - This will install the necessary node modules
+   3. `npm run copy:uswds` - This will copy the USWDS font, js, and icons to the
+   base theme asset folder
 4. Copy the following files and directories into your existing sub theme folder
     *  __subtheme.fractal.config.js__ - Rename this __*fractal.config.js* in your subtheme__.
     *  __subtheme.gulpfile.js__ - Rename this __*gulpfile.js* in your subtheme__
     * the __src__ directory and all files under it
     * the __.nvmrc__, __.npmrc__, __package.json__ and __package-lock.json__ files
     * __iq.tooling.yml__ - this is your configuration file.
-5. Follow the instructions in step 3 above in your theme folder.
+5. Navigate to your theme folder and run (_Note: you do not need to have the
+   USWDS assets files in your subtheme folder_)
+   1. `nvm use` - This will install and switch to the necessary version of Node and NPM.
+   2. `npm ci` - This will install the necessary node modules
 
 You should now be ready to start working with USWDS and Fractal.
 

@@ -38,14 +38,12 @@
     "url": "https://github.com/IQ-Solutions/iq_uswds/issues"
   },
   "homepage": "https://github.com/IQ-Solutions/iq_uswds#readme",
-  "dependencies": {
-    "@uswds/uswds": "^3.4.1"
-  },
   "devDependencies": {
     "@frctl/fractal": "^1.5.15",
     "@frctl/mandelbrot": "^1.10.3",
     "@iq-solutions/fractal-twing": "^0.1.3",
     "@uswds/compile": "^1.0.0",
+    "@uswds/uswds": "^3.4.1",
     "@wondrousllc/fractal-twig-drupal-adapter": "^1.3.1",
     "autoprefixer": "^10.4.14",
     "cssnano": "^5.1.15",
