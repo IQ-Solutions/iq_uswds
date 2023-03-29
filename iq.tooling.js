@@ -58,8 +58,7 @@ function copyImages() {
 exports.startFractal = task("fractal:start", startFractal);
 exports.buildFractal = task("fractal:build", buildFractal);
 exports.copyImages = task("copy:images", copyImages);
-exports.compile = uswds.compile;
-exports.watch = uswds.watch;
-exports.compileSass = uswds.compileSass;
-exports.watch = uswds.watch;
-exports.copyAll = uswds.copyAll;
+exports.compile = task("uswds:compile", uswds.compile);
+exports.watch = task("uswds:watch", uswds.watch);
+exports.compileSass = task("uswds:compileSass", uswds.compileSass);
+exports.copyAssets = task('uswds:copyAssets', uswds.copyAssets);

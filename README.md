@@ -26,12 +26,12 @@ If you are missing any of these configurations please speak with your project te
    1. `nvm use` - This will install and switch to the necessary version of Node and NPM.
    2. `npm ci` - This will install the necessary node modules
 4. Copy the following files and directories into your existing sub theme folder
-    *  __subtheme.fractal.config.js__ - Rename this __*fractal.config.js in your subtheme*__.
-    *  __gulpfile.js__ - this is necessary for gulp to run
+    *  __subtheme.fractal.config.js__ - Rename this __*fractal.config.js* in your subtheme__.
+    *  __subtheme.gulpfile.js__ - Rename this __*gulpfile.js* in your subtheme__
     * the __src__ directory and all files under it
     * the __.nvmrc__, __.npmrc__, __package.json__ and __package-lock.json__ files
     * __iq.tooling.yml__ - this is your configuration file.
-5. The instructions in step 3 above in your theme folder.
+5. Follow the instructions in step 3 above in your theme folder.
 
 You should now be ready to start working with USWDS and Fractal.
 
