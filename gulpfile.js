@@ -3,8 +3,6 @@
 const { series, parallel, task } = require("gulp");
 const iqTooling = require("./iq.tooling");
 
-iqTooling.settings.project_title = 'Test';
-
 /**
  * Exports
  * Add as many as you need
