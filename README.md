@@ -27,16 +27,17 @@ If you are missing any of these configurations please speak with your project te
    3. `npm run copy:uswds` - This will copy the USWDS font, js, and icons to the base theme asset folder
 4. Copy the following files and directories into your existing sub theme folder
     *  __subtheme.fractal.config.js__ - Rename this __*fractal.config.js* in your subtheme__.
+      * You will need to modified the path pointing to the IQ USWDS base theme to match your directory structure.
     *  __subtheme.gulpfile.js__ - Rename this __*gulpfile.js* in your subtheme__
-    * the __src__ directory and all files under it
+      * You will need to modified the path pointing to the IQ USWDS base theme to match your directory structure.
+    * the __src__ directory and all files under it (*NOTE: You may not want to copy all of the components. Ideally you should point your components to the IQ USWDS component and only override it if necessary.*)
     * the __.nvmrc__, __.npmrc__, __package.json__ and __package-lock.json__ files
     * __iq.tooling.yml__ - this is your configuration file.
 5. Navigate to your theme folder and run:
    1. `nvm use` - This will install and switch to the necessary version of Node and NPM.
    2. `npm ci` - This will install the necessary node modules
-   3. `npm run copy:uswds` - This will copy the USWDS font, js, and icons to the
 
-You should now be ready to start working with USWDS and Fractal.
+You should now be ready to start working with USWDS and Fractal. Before you do anything in your sub theme let's do some configuration.
 
 ### Configuration
 IQ USWDS comes with a configuration file to simplify so parts of the process. The file is named `iq.tooling.yml`. Here is an example of the contents of the file:
@@ -80,3 +81,25 @@ This section are specific to the USWDS complier.
 __version__ - Currently the complier can be used with USWDS 2.x and 3.x. The default is version 3.
 __dist_css_path__ - The USWDS complier css build path
 __dist_theme__ - The USWDS complier scss source path. This is where styles.scss should be located.
+
+Using the information above, configure your subtheme with the appropriate paths relative to your theme.
+#### Usage
+Now that you've added the appropriate configuration for your subtheme. You can now get started.
+
+First you'll want to make sure your theme has the USWDS fonts and JS available to your theme Fractal.
+If you copied the package.json you can run `npm run copy:uswds`. This will copy the USWDS files.
+
+With those copied you get started setting up your components in the following structure in your theme:
+```
+theme_root:
+  src
+    components
+    images
+    js
+    scss
+  templates
+```
+
+If you follow the installation instructions earlier, you will likely already have that structure.
+
+From here you can run `npm run start:fractal` and begin theming.
