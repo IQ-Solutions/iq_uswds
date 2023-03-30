@@ -55,10 +55,7 @@ function copyImages() {
   return src(config.iqTooling.img_source).pipe(dest(config.iqTooling.img_dest));
 }
 
-exports.startFractal = task("fractal:start", startFractal);
-exports.buildFractal = task("fractal:build", buildFractal);
-exports.copyImages = task("copy:images", copyImages);
-exports.compile = task("uswds:compile", uswds.compile);
-exports.watch = task("uswds:watch", uswds.watch);
-exports.compileSass = task("uswds:compileSass", uswds.compileSass);
-exports.copyAssets = task('uswds:copyAssets', uswds.copyAssets);
+exports.startFractal = startFractal;
+exports.buildFractal = buildFractal;
+exports.copyImages = copyImages;
+exports.uswds = uswds;
