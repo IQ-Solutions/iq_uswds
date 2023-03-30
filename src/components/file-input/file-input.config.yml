@@ -1,5 +1,5 @@
 label: File input
-status: ready
+status: wip
 collated: true
 
 variants:
@@ -15,7 +15,7 @@ variants:
       hint: Select PDF or TXT files
       multiple: true
       accept:
-        - .pdf 
+        - .pdf
         - .txt
 
   - name: wildcard

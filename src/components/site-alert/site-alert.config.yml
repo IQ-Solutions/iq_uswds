@@ -1,5 +1,5 @@
 label: Site Alert
-status: ready
+status: wip
 context:
   siteAlert:
     aria: Site alert

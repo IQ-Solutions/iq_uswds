@@ -1,5 +1,5 @@
 label: Banner
-status: ready
+status: wip
 
 context:
   uswds_images: /fractal/img/

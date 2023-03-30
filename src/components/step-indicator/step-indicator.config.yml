@@ -1,5 +1,5 @@
 label: Step indicator
-status: ready
+status: wip
 context:
   showLabels: true
   currentStep: 3

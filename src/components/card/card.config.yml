@@ -1,5 +1,5 @@
 label: Card
-status: ready
+status: wip
 
 variants:
   - name: default
