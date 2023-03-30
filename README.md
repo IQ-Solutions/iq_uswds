@@ -64,22 +64,35 @@ uswds:
 #### Settings
 ##### Fractal Settings
 This section contains all of the settings for Fractal that can be changed.
+
 __themePath__ - the path to the current theme. This will generall be `./` or the current directory.
+
 __project_title__ - the theme title
+
 __assets_path__ - the theme assets folder, this is were the build assets will be placed. *Do not make this a folder where you don't want anything to be deleted.*
+
 __build_path__ - the folder where the a static version of Fractal will be placed. This is used for clients/PM.
+
 __basePath__ - this is ALSO the theme path but is used for a different purpose. It should generally be the current directory or `./`.
+
 __uswds_path__ - this is the path to the uswds base theme. Normally this would be `../../contrib/uswds_base/templates`. Configure this appropriately.
+
 __template_path__ - the current theme template path
+
 __theme_name__ - the themes machine name
 ##### IQ Tooling Settings
 This section constains setting specific to IQ USWDS tooling.
+
 __img_dest__ - Fractal my sometimes need the images you are using available to it, as such it is good practice to store the images in the theme `src` directory, then have them moved as build assets. This folder points to the destination folder.
+
 __img_source__ - Fractal my sometimes need the images you are using available to it, as such it is good practice to store the images in the theme `src` directory, then have them moved as build assets. This folder points to the source folder.
 ##### USWDS Complier settings
 This section are specific to the USWDS complier.
+
 __version__ - Currently the complier can be used with USWDS 2.x and 3.x. The default is version 3.
+
 __dist_css_path__ - The USWDS complier css build path
+
 __dist_theme__ - The USWDS complier scss source path. This is where styles.scss should be located.
 
 Using the information above, configure your subtheme with the appropriate paths relative to your theme.
