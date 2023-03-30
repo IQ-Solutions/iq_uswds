@@ -14,14 +14,11 @@ const component_path = path.resolve(config.fractal.component_path);
 const assets_path = path.resolve(config.fractal.assets_path);
 const build_path = path.resolve(config.fractal.build_path);
 const base_path = path.resolve(theme_path, "src", "components");
-const uswds_path = config.fractal.uswds_path
-  ? config.fractal.uswds_path
+const uswds_path = config.fractal.uswds_path ? config.fractal.uswds_path
   : "../contrib/uswds_base/templates";
-const template_path = config.fractal.template_path
-  ? config.fractal.template_path
+const template_path = config.fractal.template_path ? config.fractal.template_path
   : "templates";
-const theme_name = config.fractal.theme_name
-  ? config.fractal.theme_name
+const theme_name = config.fractal.theme_name ? config.fractal.theme_name
   : "iq_uswds";
 const templatePath = path.resolve(theme_path, template_path);
 const uswdsPath = path.resolve(theme_path, uswds_path);
@@ -48,7 +45,7 @@ twingEnvironment.addFilter(evenlyDistribute);
 
 const twing = twingAdapter.createAdapter({
   environment: twingEnvironment,
-  base_path,
+  basePath: base_path,
 });
 
 fractal.components.engine(twing);
