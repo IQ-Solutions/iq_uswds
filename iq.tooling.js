@@ -26,7 +26,7 @@ uswds.paths.dist.css = config.uswds.dist_css_path;
 uswds.paths.dist.theme = config.uswds.dist_theme;
 
 function startFractal() {
-  const server = fractal.fractal.web.server({
+  const server = fractal.web.server({
     sync: true,
   });
   server.on("error", (err) => logger.error(err.message));
@@ -38,7 +38,7 @@ function startFractal() {
 }
 
 function buildFractal() {
-  const builder = fractal.fractal.web.builder();
+  const builder = fractal.web.builder();
   builder.on("progress", (completed, total) =>
     logger.update(`Exported ${completed} of ${total} items`, "info")
   );
