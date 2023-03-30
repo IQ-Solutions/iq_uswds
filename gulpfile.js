@@ -7,6 +7,7 @@ const iqTooling = require("./iq.tooling");
  * Exports
  * Add as many as you need
  */
+exports.iqTooling = iqTooling;
 exports.fractal = task('fractal', series(
   "uswds:compileSass",
   parallel("uswds:watch", "fractal:start")
