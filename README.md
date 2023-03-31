@@ -96,6 +96,15 @@ __dist_css_path__ - The USWDS complier css build path
 __dist_theme__ - The USWDS complier scss source path. This is where styles.scss should be located.
 
 Using the information above, configure your subtheme with the appropriate paths relative to your theme.
+
+##### Acquia Hosted Sites 
+Due to the file structure associated with Acquia you are going to need to edit the following in your theme directory to get Fractal to work properly.
+
+1. Edit line 4 gulpfile.js
+	- `../../../../themes/custom/iq_uswds` to `../../../../docroot/themes/custom/iq_uswds`
+2. Edit line 2 of fractal.config.js
+    - `../../../../themes/custom/iq_uswds/fractal.config` to `../../../../docroot/themes/custom/iq_uswds/fractal.config`
+
 #### Usage
 Now that you've added the appropriate configuration for your subtheme. You can now get started.
 
