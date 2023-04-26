@@ -27,7 +27,8 @@
     "build": "gulp build",
     "build:fractal": "gulp fractal:build",
     "copy:uswds": "gulp uswds:copyAssets",
-    "copy:images": "gulp copy:images"
+    "copy:images": "gulp copy:images",
+    "assets:rebase": "gulp uswds:copyAssets && gulp copy:images & gulp uswds:compileSass"
   },
   "repository": {
     "type": "git",

@@ -125,3 +125,7 @@ theme_root:
 If you follow the installation instructions earlier, you will likely already have that structure.
 
 From here you can run `npm run start:fractal` and begin theming.
+
+##### Theme Building notes
+- Non-USWDS Images relating to your theme should be placed in the `src/images` folder. These images will need to be copied over to the assets directory in order for them to render properly in your theme. To copy your images to the `assets` directory you will need to run `npm run copy:images`. 
+- If you need to leave your USWDS development git branch to work on something else, you can run `npm run assets:rebase` when you re-enter the USWDS development git branch. Doing so will compile the USWDS assets, copy theme images and compile sass.
