@@ -11,3 +11,5 @@ build
 assets/uswds
 assets/css
 assets/img
+
+*.code-workspace
