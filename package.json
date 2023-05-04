@@ -1,6 +1,6 @@
 {
   "name": "iq_uswds",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Base IQ USWDS theme for architecture and tooling",
   "main": "index.js",
   "browserslist": [
