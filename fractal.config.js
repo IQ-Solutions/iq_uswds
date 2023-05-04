@@ -27,7 +27,7 @@ fractal.set("project.title", config.fractal.project_title);
 fractal.components.set("path", component_path);
 fractal.components.set("default.preview", "@iqsolutions");
 
-fractal.web.set("static.mount", "fractal");
+fractal.web.set("static.mount", fractal_path);
 fractal.web.set("static.path", assets_path);
 fractal.web.set("builder.dest", build_path);
 

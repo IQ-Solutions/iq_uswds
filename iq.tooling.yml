@@ -1,4 +1,5 @@
 fractal:
+  fractal_path: fractal
   themePath: ./
   project_title: IQ USWDS
   component_path: ./src/components
@@ -11,6 +12,7 @@ fractal:
 iqTooling:
   img_dest: ./assets/img
   img_source: ./src/images/**
+  iq_uswds_path: ../../../../themes/custom/iq_uswds
 uswds:
   version: 3
   dist_css_path: ./assets/css

@@ -1,7 +1,11 @@
 /* gulpfile.js */
 
 const path = require("path");
-const iq_uswds_path = path.resolve("../../../../themes/custom/iq_uswds");
+const yaml = require("yaml");
+const { readFileSync } = require("fs");
+const configFile = readFileSync("./iq.tooling.yml", "utf8");
+const config = yaml.parse(configFile);
+const iq_uswds_path = path.resolve(config.iq_uswds_path);
 const { series, parallel, task } = require("gulp");
 const iqTooling = require(`${iq_uswds_path}/iq.tooling`);
 
