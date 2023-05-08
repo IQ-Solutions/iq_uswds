@@ -65,7 +65,9 @@ uswds:
 ##### Fractal Settings
 This section contains all of the settings for Fractal that can be changed.
 
-__themePath__ - the path to the current theme. This will generall be `./` or the current directory.
+__static_path__ - the fractal public path. This will generally be `fractal` or `public`. Do not add any slashes.
+
+__themePath__ - the path to the current theme. This will generally be `./` or the current directory.
 
 __project_title__ - the theme title
 
@@ -86,6 +88,8 @@ This section constains setting specific to IQ USWDS tooling.
 __img_dest__ - Fractal my sometimes need the images you are using available to it, as such it is good practice to store the images in the theme `src` directory, then have them moved as build assets. This folder points to the destination folder.
 
 __img_source__ - Fractal my sometimes need the images you are using available to it, as such it is good practice to store the images in the theme `src` directory, then have them moved as build assets. This folder points to the source folder.
+
+__iq_uswds_path__ - The path to the IQ USWDS theme.
 ##### USWDS Complier settings
 This section are specific to the USWDS complier.
 
@@ -97,7 +101,7 @@ __dist_theme__ - The USWDS complier scss source path. This is where styles.scss 
 
 Using the information above, configure your subtheme with the appropriate paths relative to your theme.
 
-##### Acquia Hosted Sites 
+##### Acquia Hosted Sites
 Due to the file structure associated with Acquia you are going to need to edit the following in your theme directory to get Fractal to work properly.
 
 1. Edit line 4 gulpfile.js
@@ -127,5 +131,5 @@ If you follow the installation instructions earlier, you will likely already hav
 From here you can run `npm run start:fractal` and begin theming.
 
 ##### Theme Building notes
-- Non-USWDS Images relating to your theme should be placed in the `src/images` folder. These images will need to be copied over to the assets directory in order for them to render properly in your theme. To copy your images to the `assets` directory you will need to run `npm run copy:images`. 
+- Non-USWDS Images relating to your theme should be placed in the `src/images` folder. These images will need to be copied over to the assets directory in order for them to render properly in your theme. To copy your images to the `assets` directory you will need to run `npm run copy:images`.
 - If you need to leave your USWDS development git branch to work on something else, you can run `npm run assets:rebase` when you re-enter the USWDS development git branch. Doing so will compile the USWDS assets, copy theme images and compile sass.

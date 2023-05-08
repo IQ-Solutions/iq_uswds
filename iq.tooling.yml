@@ -1,5 +1,5 @@
 fractal:
-  fractal_path: fractal
+  static_path: fractal
   themePath: ./
   project_title: IQ USWDS
   component_path: ./src/components

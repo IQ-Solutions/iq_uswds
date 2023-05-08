@@ -24,6 +24,7 @@
     "start:fractal": "gulp fractal",
     "fractal:interactive": "fractal",
     "gulp": "gulp",
+    "build:dev": "gulp buildDev",
     "build": "gulp build",
     "build:fractal": "gulp fractal:build",
     "copy:uswds": "gulp uswds:copyAssets",

@@ -9,7 +9,7 @@ const evenlyDistribute = require("./src/js/evenlyDistribute");
 const configFile = readFileSync("./iq.tooling.yml", "utf8");
 const config = yaml.parse(configFile);
 
-const fractal_path = path.resolve(config.fractal.fractal_path);
+const static_path = path.resolve(config.fractal.static_path);
 const theme_path = path.resolve(config.fractal.themePath);
 const component_path = path.resolve(config.fractal.component_path);
 const assets_path = path.resolve(config.fractal.assets_path);
@@ -28,7 +28,7 @@ fractal.set("project.title", config.fractal.project_title);
 fractal.components.set("path", component_path);
 fractal.components.set("default.preview", "@iqsolutions");
 
-fractal.web.set("static.mount", fractal_path);
+fractal.web.set("static.mount", config.fractal.static_path);
 fractal.web.set("static.path", assets_path);
 fractal.web.set("builder.dest", build_path);
 

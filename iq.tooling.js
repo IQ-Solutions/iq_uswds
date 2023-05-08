@@ -2,7 +2,7 @@ const yaml = require("yaml");
 const { readFileSync } = require("fs");
 const path = require("path");
 const iq_uswds_path = path.resolve(__dirname);
-const { src, dest, task } = require("gulp");
+const { src, dest } = require("gulp");
 const uswds = require(`${iq_uswds_path}/node_modules/@uswds/compile`);
 const log = console.log;
 const fractal = require(`${iq_uswds_path}/fractal.config.js`);
@@ -56,13 +56,19 @@ function copyImages() {
 }
 
 function moveFractalAssets() {
-  log(
-    `Copying from ${config.iqTooling.img_source} to ${config.iqTooling.img_dest}`
+  const source_path = path.resolve(
+    path.join(
+      `${config.fractal.build_path}`,
+      `${config.fractal.static_path}/**`
+    )
   );
-  return src(config.iqTooling.img_source).pipe(dest(config.iqTooling.img_dest));
+  const dest_path = path.resolve(config.fractal.build_path);
+  log(`Copying from ${source_path} to ${dest_path}`);
+  return src(`${source_path}`).pipe(dest(dest_path));
 }
 
 exports.startFractal = startFractal;
 exports.buildFractal = buildFractal;
 exports.copyImages = copyImages;
+exports.moveFractalAssets = moveFractalAssets;
 exports.uswds = uswds;
