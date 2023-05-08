@@ -55,6 +55,13 @@ function copyImages() {
   return src(config.iqTooling.img_source).pipe(dest(config.iqTooling.img_dest));
 }
 
+function moveFractalAssets() {
+  log(
+    `Copying from ${config.iqTooling.img_source} to ${config.iqTooling.img_dest}`
+  );
+  return src(config.iqTooling.img_source).pipe(dest(config.iqTooling.img_dest));
+}
+
 exports.startFractal = startFractal;
 exports.buildFractal = buildFractal;
 exports.copyImages = copyImages;

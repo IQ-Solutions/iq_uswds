@@ -9,6 +9,7 @@ const evenlyDistribute = require("./src/js/evenlyDistribute");
 const configFile = readFileSync("./iq.tooling.yml", "utf8");
 const config = yaml.parse(configFile);
 
+const fractal_path = path.resolve(config.fractal.fractal_path);
 const theme_path = path.resolve(config.fractal.themePath);
 const component_path = path.resolve(config.fractal.component_path);
 const assets_path = path.resolve(config.fractal.assets_path);
