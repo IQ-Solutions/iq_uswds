@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Adds GTM code
+ */
+function iq_uswds_preprocess(&$variables) {
+  $variables['iq_uswds_gtm_id'] = theme_get_setting('iq_uswds_gtm_id');
+  $variables['iq_uswds_invicti_key'] = theme_get_setting('iq_uswds_invicti_key');
+}
