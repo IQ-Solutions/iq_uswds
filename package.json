@@ -59,7 +59,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "jshint": "^2.13.6",
-    "postcss": "^8.4.25",
+    "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-load-config": "^4.0.1",
     "sass": "^1.63.6",
