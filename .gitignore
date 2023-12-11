@@ -12,4 +12,8 @@ assets/uswds
 assets/css
 assets/img
 
+# VS Code
 *.code-workspace
+
+# macOS
+*.DS_Store
