@@ -9,6 +9,7 @@ fractal:
   uswds_path: templates
   template_path: templates
   theme_name: iq_uswds
+  port: 3000
 iqTooling:
   img_dest: ./assets/img
   img_source: ./src/images/**

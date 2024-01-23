@@ -28,6 +28,7 @@ uswds.paths.dist.theme = config.uswds.dist_theme;
 function startFractal() {
   const server = fractal.web.server({
     sync: true,
+    port: config.fractal.port || 3000,
   });
   server.on("error", (err) => logger.error(err.message));
   return server.start().then(() => {
