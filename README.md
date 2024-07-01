@@ -68,23 +68,49 @@ If you have any issues with this configeration, ask senior dev.
 
 You have installed the IQ_USWDS theme and have copied the required USWDS files needed. The next step is dependent on whether on what you are trying to achieve. You can start a completely new USWDS based theme **OR** you can update an existing theme.
  
- ## Create New Theme
- If you are wanting to create a new theme, follow the instructions below. If you are wanting to update an existing theme skip this section and go to Update Existing Theme.
+## Create New Theme
+ If you are wanting to create a new theme, follow the instructions below. This procedure will create a new standalone theme that will be independent of the IQ-USWDS. This does mean that you will be responsible for updates in your theme. If you are wanting to update an existing theme skip this section and go to Update Existing Theme.
 
+##### Create theme directory
+* In your project, navigate to your **theme/custom/iq_uswds** and copy the **NEW-SITE-STARTERKIT** directory
+* Go back to **theme/custom** and paste the **NEW-SITE-STARTERKIT** 
+* Rename **NEW-SITE-STARTERKIT** with your new theme name, keep the name lower cased with no spaces. E.G. **nibib** or **nia**. You will need to use this name several times again throughout this procedure
 
+##### Update theme files
+Navigate to your new theme, all the files that contain **THEMENAME** need to be renamed with the name of your theme. E.G. **THEMENAME.info.yml** becomes **nia.info.yml**. The following files need to be renamed and edited. 
+* **THEMENAME.info.yml** 
+    * Rename file (e.g.nia.info.yml)
+    * Edit lines 4, 5, 31 and 32 to your project’s specific information
+* **THEMENAME.libraries.yml** 
+    * Rename file (e.g.nia.libraries.yml)
+* **THEMENAME.theme**
+    * Rename file (e.g.nia.theme)
+    * Edit theme preprocess hooks with your theme name
+* **iq.tooling.yml**
+    * Edit lines 4 & 11 to reflect that of your project. (More information of this config file is located below under IQ Tooling Settings)
+* **src/scss/THEMENAME** Optional, if needing to add custom styles
+    * Rename directory to project's specifications
+* **src/scss/_uswds-theme-custom-styles.scss** Optional, if needing to add custom styles
+    * Uncomment line 26 and edit to the name of the directory renamed in the step above.
 
+##### Install Node Packages
+Navigate to your theme folder and run:
+    1. `nvm use` - This will install and switch to the necessary version of Node and NPM.
+    2. `npm i` - This will install the necessary node modules and create a package.lock file 
+    
+The theme has been successfully created and is ready for development. Skip Update Existing Theme and read more about the configuration under Configuration. 
+
+## Update Existing Theme
  
- ## Update Exsisting Theme
- 
-4. Copy the following files and directories into your existing sub theme folder
+1. Copy the following files and directories into your existing sub theme folder
     *  __subtheme.fractal.config.js__ - Rename this __*fractal.config.js* in your subtheme__.
-      * You will need to modified the path pointing to the IQ USWDS base theme to match your directory structure.
+      * You will need to modify the path pointing to the IQ USWDS base theme to match your directory structure.
     *  __subtheme.gulpfile.js__ - Rename this __*gulpfile.js* in your subtheme__
-      * You will need to modified the path pointing to the IQ USWDS base theme to match your directory structure.
+      * You will need to modify the path pointing to the IQ USWDS base theme to match your directory structure.
     * the __src__ directory and all files under it (*NOTE: You may not want to copy all of the components. Ideally you should point your components to the IQ USWDS component and only override it if necessary.*)
     * the __.nvmrc__, __.npmrc__, __package.json__ and __package-lock.json__ files
     * __iq.tooling.yml__ - this is your configuration file.
-5. Navigate to your theme folder and run:
+2. Navigate to your theme folder and run:
    1. `nvm use` - This will install and switch to the necessary version of Node and NPM.
    2. `npm ci` - This will install the necessary node modules
 
@@ -114,13 +140,13 @@ uswds:
 
 #### Settings
 ##### Fractal Settings
-This section contains all of the settings for Fractal that can be changed.
+This section contains all the settings for Fractal that can be changed.
 
 __static_path__ - the fractal public path. This will generally be `fractal` or `public`. Do not add any slashes.
 __themePath__ - the path to the current theme. This will generally be `./` or the current directory.
 __project_title__ - the theme title
-__assets_path__ - the theme assets folder, this is were the build assets will be placed. *Do not make this a folder where you don't want anything to be deleted.*
-__build_path__ - the folder where the a static version of Fractal will be placed. This is used for clients/PM.
+__assets_path__ - the theme assets folder, this is where the build assets will be placed. *Do not make this a folder where you don't want anything to be deleted.*
+__build_path__ - the folder where a static version of Fractal will be placed. This is used for clients/PM.
 __basePath__ - this is ALSO the theme path but is used for a different purpose. It should generally be the current directory or `./`.
 __uswds_path__ - this is the path to the uswds base theme. Normally this would be `../../contrib/uswds_base/templates`. Configure this appropriately.
 __template_path__ - the current theme template path
@@ -139,7 +165,7 @@ This section are specific to the USWDS complier.
 
 __version__ - Currently the complier can be used with USWDS 2.x and 3.x. The default is version 3.
 
-__dist_css_path__ - The USWDS complier css build path
+__dist_css_path__ - The USWDS complier css build path.
 
 __dist_theme__ - The USWDS complier scss source path. This is where styles.scss should be located.
 
@@ -153,7 +179,7 @@ Due to the file structure associated with Acquia you are going to need to edit t
 #### Usage
 Now that you've added the appropriate configuration for your subtheme. You can now get started.
 
-First you'll want to make sure your theme has the USWDS fonts and JS available to your theme Fractal.
+First, you'll want to make sure your theme has the USWDS fonts and JS available to your theme Fractal.
 If you copied the package.json you can run `npm run copy:uswds`. This will copy the USWDS files.
 
 With those copied you get started setting up your components in the following structure in your theme:
@@ -176,4 +202,4 @@ From here you can run `npm run start:fractal` and begin theming.
 - If you need to leave your USWDS development git branch to work on something else, you can run `npm run assets:rebase` when you re-enter the USWDS development git branch. Doing so will compile the USWDS assets, copy theme images and compile sass.
 - 
 
-Updated: 01/12/2024 
+Updated: 07/1/2024
