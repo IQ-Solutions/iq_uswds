@@ -1,0 +1,37 @@
+<div class="usa-card__container radius-0">
+  <div class="hide-external-link">
+    {%- if media -%}
+      {%- if url -%}
+        <a href="{{ url }}">
+      {%- endif -%}
+      {%- autoescape false -%}
+        {{ media }}
+      {%- endautoescape -%}
+      {%- if url -%}
+        </a> {# / a #}
+      {%- endif -%}
+    {%- else -%}
+      <div class="usa-card__media">
+        <div class="usa-card__img">
+          <img src="/themes/nia/images/inside-nia-blog.png" alt="Inside NIA: A Blog for Researchers" typeof="Image" />
+        </div> {# / div.card__img #}
+      </div> {# / div.usa-card__media #}
+    {%- endif -%}
+    {%- block meta_information -%}
+    {%- endblock -%}
+  </div>
+  {%- if title -%}
+    <div class="usa-card__header">
+      <h3 class="usa-card__heading">
+        {{ title }}
+      </h3> {# / h3.usa-card__heading #}
+    </div> {# / div.usa-card__header hide-external-link #}
+  {%- endif -%}
+  <div class="usa-card__body">
+    {%- block card_body -%}
+      {%- if body_content -%}
+        {{ body_content }}
+      {%- endif -%}
+    {%- endblock -%}
+  </div> {# / div.usa-card__body #}
+</div> {# / div.usa-card__container radius-0 #}

@@ -1,0 +1,15 @@
+{# {{ devel_breakpoint() }} #}
+
+<div>
+  {%- if container_title -%}
+    <h2>{{ container_title }}</h2>
+  {%- endif -%}
+  {%- if container_summary -%}
+    {{ container_summary }}
+  {%- endif -%}
+  <div class="usa-card-group grid-row grid-gap">
+    {%- for card in cards -%}
+      <div class="usa-card grid-col-12 tablet:grid-col-{{ column_size }}">{{ card }}</div>
+    {%- endfor -%}
+  </div>
+</div>

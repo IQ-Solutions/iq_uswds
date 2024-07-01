@@ -1,0 +1,80 @@
+label: Card
+status: wip
+
+variants:
+  - name: default
+    label: 3 Column
+    context:
+      container_title: Container Title
+      column_size: 4
+      cards:
+        - '@@card--image'
+        - '@@card--image'
+        - '@@card--image'
+        - '@@card--image'
+        - '@@card--video'
+        - '@@card--image'
+
+  - name: four_column
+    container_title: Container Title
+    label: 4 Column
+    context:
+      container_title: Container Title
+      column_size: 3
+      container_summary: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      cards:
+        - '@@card--image'
+        - '@@card--image'
+        - '@@card--image'
+        - '@@card--image'
+        - '@@card--image'
+        - '@@card--image'
+        - '@@card--image'
+        - '@@card--video'
+
+
+  - name: image
+    label: Card (image)
+    context:
+      cards: ''
+      title: Default media
+      date: August 6, 2022
+      classes: "tablet:grid-col"
+      url: http://www.google.com
+      media: >
+        <div class="usa-card__media">
+        <div class="usa-card__img">
+          <img src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg" alt="A placeholder image">
+        </div>
+        </div>
+      body_content: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+  - name: video
+    label: Card (video)
+    context:
+      cards: ''
+      title: Default media
+      date: MM/DD/YYYY
+      classes: "tablet:grid-col"
+      url: http://www.google.com
+      media: >
+        <div class="usa-card__media">
+          <div class="usa-card__img">
+            <iframe src="https://www.youtube.com/embed/nsL436zIfBA?list=PLmk21KJuZUM6nAILLw33X7S6AD2OuuvuJ" title="Why I Participate in Alzheimer's Research - Keretha's Story (Short version)"></iframe>
+          </div>
+        </div>
+      body_content: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Boo.</p>
+  - name: dynamic
+    label: Card (dynamic)
+    context:
+      cards: ''
+      title: This is a blog title
+      classes: "tablet:grid-col"
+      url: http://www.google.com
+      media: >
+        <div class="usa-card__media">
+        <div class="usa-card__img">
+          <img src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg" alt="A placeholder image">
+        </div>
+        </div>
+      body_content: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>

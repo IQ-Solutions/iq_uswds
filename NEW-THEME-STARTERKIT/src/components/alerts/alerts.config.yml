@@ -1,0 +1,14 @@
+status: wip
+context:
+  body: 'Lorem ipsum dolor sit amet, <a class="usa-link" href="javascript:void(0);">consectetur adipiscing</a> elit, sed do eiusmod.'
+  title: Warning
+  type: error
+  dismissable: true
+  content: {}
+
+variants:
+  - name: info
+    label: Info
+    context:
+      type: info
+      title: Info

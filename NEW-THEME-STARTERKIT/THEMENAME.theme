@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Adds GTM code
+ */
+function THEMENAME_preprocess(&$variables) {
+  $variables['THEMENAME_gtm_id'] = theme_get_setting('THEMENAME_gtm_id');
+  $variables['THEMENAME_invicti_key'] = theme_get_setting('THEMENAME_invicti_key');
+}

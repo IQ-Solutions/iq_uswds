@@ -1,0 +1,34 @@
+label: Combo Box
+status: wip
+
+variants:
+  - name: default
+    label: Default
+    context:
+      comboBox:
+        label: "Select a fruit"
+        name: "fruit"
+
+  - name: default-value
+    label: Default Value
+    context:
+      comboBox:
+        defaultValue: "blackberry"
+
+  - name: disabled
+    label: Disabled
+    context:
+      comboBox:
+        disabled: true
+
+  - name: placeholder
+    label: Placeholder
+    context:
+      comboBox:
+        placeholder: "Select one..."
+
+  - name: required
+    label: Required
+    context:
+      comboBox:
+        required: true

@@ -1,0 +1,8 @@
+{% extends '@components/search/bing-search-form.html.twig' %}
+
+{% block children %}
+	<div class="js-form-item form-item js-form-type-textfield form-item-searching-term js-form-item-searching-term form-no-label ally-focus-within">
+    {{ search_textfield }}
+	</div>
+  {{ search_button }}
+{% endblock %}

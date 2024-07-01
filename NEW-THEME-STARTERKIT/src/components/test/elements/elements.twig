@@ -1,0 +1,36 @@
+<div class="margin-top-4">
+  {% for element in headers %}
+    <{{ element.tag }}>{{ element.label }} - &lt;{{ element.tag }}&gt;</{{ element.tag }}>
+  {% endfor %}
+</div>
+
+<div class="margin-top-4">
+  <ul>
+    <li>Unordered list</li>
+    <ul>
+      <li>Second level</li>
+      <ul>
+        <li>Third level</li>
+      </ul>
+    </ul>
+  </ul>
+</div>
+
+<div class="margin-top-4">
+  <ol>
+    <li>Ordered list</li>
+    <ol>
+      <li>Second level</li>
+      <ol>
+        <li>Third level</li>
+      </ol>
+    </ol>
+  </ol>
+</div>
+
+
+{% for element in text_content %}
+  <div class="margin-top-4">
+    <{{ element.tag }}>{{ element.label }} - &lt;{{ element.tag }}&gt;</{{ element.tag }}>
+  </div>
+{% endfor %}

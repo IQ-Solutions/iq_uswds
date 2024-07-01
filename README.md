@@ -1,18 +1,58 @@
 # IQ USWDS
 This package is meant to serve as the base tooling and architecture for IQ's USWDS site building effort.
-
 IQ USWDS will install necessary tooling for compiling custom site code and USWDS code as one file, and for using Fractal to build and preview the site.
+## Dependencies
+* uswds_base
+* components (Optional-- nice to have)
+
+##### Decide how you want to approach this tast
+Think about the project as a whole. Are you only going to be working on this theme and not on any general request that pop up during this build? Or are you going to be building the new theme WHILE maintaining the current site? Due to the length of time needed to build this new theme, you may want to read the  README-ENVIORMET-SETUP.md in this repo to see what you will need to do if you are using one enviorment or two separate enviorments.
 
 ## Expected Local Configuration
 There are the minimum requirements to successfully use IQ USWDS locally:
 * WSL with Ubuntu 20.04 or equivalent.
 * NVM
-* Github Auth Tokens generated and available to your local terminal profile.
+* Github Auth Tokens generated and available to your local terminal profile. If you do not have one set up already, follow the instructions below.
 
-If you are missing any of these configurations please speak with your project tech lead or a senior dev.
+##### Github Auth Token
+* Go to https://github.com/settings/tokens 
+* Click generate new token (use the classic token) 
+* Set the expiration (we don't currently have a recommendation on what it should be) 
+* click repo to give all permissions for repo 
+* click generate token 
+* **COPY THE TOKEN**. You can only do this once or you will lose it and generate a new one. Make sure to COPY THE TOKEN. 
 
-## How to use
-### Installation
+For the following instructions replace **<auth_token_goes_here>** with your token
+
+##### Add a Git Auth Token to Lando 
+While in a WSL terminal (PC) or a terminal (Mac): 
+* Type in `cd ~/.lando` 
+* Open the config.yml file (use cmd line editor or whatever you want. e.g. `nano config.yml`) 
+* Add the following  
+    ```
+    appEnv: 
+        GITHUB_AUTH_TOKEN: <auth_token_goes_here> 
+            COMPOSER_AUTH: '{"github-oauth": {"github.com": "<auth_token_goes_here>"}}'  
+    ```
+* Save and exit the editor
+
+##### Add a Git Auth Token to .bashrc
+While in a WSL terminal (PC): 
+* Type `cd ~/`
+* `explorer.exe .bashrc`
+* add the following to theh bottom of your .bashrc file
+    ```
+    export GITHUB_AUTH_TOKEN=<auth_token_goes_here>
+    export COMPOSER_AUTH='{"github-oauth": {"github.com": <auth_token_goes_here> "}}’
+    ```
+* save the file and close
+* update the .bashrc file by typing 'source ~/.bashrc'
+
+*Note: If installing on a Mac you would use the equivalent of the .bashrc file, e.g. .zshrc...*
+    
+If you have any issues with this configeration, ask senior dev.
+
+## Install IQ USWDS theme
 1. Add the package repo to the repositories section of your composer.json as seen here:
     ```json
         {
@@ -25,6 +65,17 @@ If you are missing any of these configurations please speak with your project te
    1. `nvm use` - This will install and switch to the necessary version of Node and NPM.
    2. `npm ci` - This will install the necessary node modules
    3. `npm run copy:uswds` - This will copy the USWDS font, js, and icons to the base theme asset folder
+
+You have installed the IQ_USWDS theme and have copied the required USWDS files needed. The next step is dependent on whether on what you are trying to achieve. You can start a completely new USWDS based theme **OR** you can update an existing theme.
+ 
+ ## Create New Theme
+ If you are wanting to create a new theme, follow the instructions below. If you are wanting to update an existing theme skip this section and go to Update Existing Theme.
+
+
+
+ 
+ ## Update Exsisting Theme
+ 
 4. Copy the following files and directories into your existing sub theme folder
     *  __subtheme.fractal.config.js__ - Rename this __*fractal.config.js* in your subtheme__.
       * You will need to modified the path pointing to the IQ USWDS base theme to match your directory structure.
@@ -39,7 +90,7 @@ If you are missing any of these configurations please speak with your project te
 
 You should now be ready to start working with USWDS and Fractal. Before you do anything in your sub theme let's do some configuration.
 
-### Configuration
+#### Configuration
 IQ USWDS comes with a configuration file to simplify so parts of the process. The file is named `iq.tooling.yml`. Here is an example of the contents of the file:
 ```yaml
 fractal:
@@ -66,22 +117,15 @@ uswds:
 This section contains all of the settings for Fractal that can be changed.
 
 __static_path__ - the fractal public path. This will generally be `fractal` or `public`. Do not add any slashes.
-
 __themePath__ - the path to the current theme. This will generally be `./` or the current directory.
-
 __project_title__ - the theme title
-
 __assets_path__ - the theme assets folder, this is were the build assets will be placed. *Do not make this a folder where you don't want anything to be deleted.*
-
 __build_path__ - the folder where the a static version of Fractal will be placed. This is used for clients/PM.
-
 __basePath__ - this is ALSO the theme path but is used for a different purpose. It should generally be the current directory or `./`.
-
 __uswds_path__ - this is the path to the uswds base theme. Normally this would be `../../contrib/uswds_base/templates`. Configure this appropriately.
-
 __template_path__ - the current theme template path
-
 __theme_name__ - the themes machine name
+
 ##### IQ Tooling Settings
 This section constains setting specific to IQ USWDS tooling.
 
@@ -103,11 +147,8 @@ Using the information above, configure your subtheme with the appropriate paths 
 
 ##### Acquia Hosted Sites
 Due to the file structure associated with Acquia you are going to need to edit the following in your theme directory to get Fractal to work properly.
-
-1. Edit line 4 gulpfile.js
+1. Edit line 15 iq.tooling.yml
 	- `../../../../themes/custom/iq_uswds` to `../../../../docroot/themes/custom/iq_uswds`
-2. Edit line 2 of fractal.config.js
-    - `../../../../themes/custom/iq_uswds/fractal.config` to `../../../../docroot/themes/custom/iq_uswds/fractal.config`
 
 #### Usage
 Now that you've added the appropriate configuration for your subtheme. You can now get started.
@@ -133,3 +174,6 @@ From here you can run `npm run start:fractal` and begin theming.
 ##### Theme Building notes
 - Non-USWDS Images relating to your theme should be placed in the `src/images` folder. These images will need to be copied over to the assets directory in order for them to render properly in your theme. To copy your images to the `assets` directory you will need to run `npm run copy:images`.
 - If you need to leave your USWDS development git branch to work on something else, you can run `npm run assets:rebase` when you re-enter the USWDS development git branch. Doing so will compile the USWDS assets, copy theme images and compile sass.
+- 
+
+Updated: 01/12/2024 

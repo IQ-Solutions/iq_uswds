@@ -1,0 +1,30 @@
+<div class="usa-card__container">
+  <div class="grid-container">
+    <div class="grid-row grid-gap-4">
+      {% if media_element %}
+        <div class="custom-callout__image tablet:grid-col-6">
+          {{ media_element }}
+        </div>
+      {% endif %}
+      <div class="custom-callout__content display-flex flex-column tablet:grid-col-fill">
+        <div>
+          <h2 class="usa-card__heading text-white">{{ title }}</h2>
+          {% if body %}
+            <div class="custom-callout__text-body line-height-body-5 padding-y-105 text-white">
+              {{ body }}
+            </div>
+          {% endif %}
+        </div>
+        {% if links %}
+          <div class="custom-callout__buttons">
+            {% for link in links %}
+              <button class="usa-button">
+                {{ link }}
+              </button>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

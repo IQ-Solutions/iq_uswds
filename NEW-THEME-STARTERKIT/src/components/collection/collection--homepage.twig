@@ -1,0 +1,24 @@
+{# THIS FILE WILL BE THE CONTAINER #}
+{%
+  set classes = [
+    'tablet:grid-col-12',
+    'homepage-collection-container',
+  ]
+%}
+
+<div{{attributes.addClass(classes)}}>
+<!-- this works w/fractal <div class="tablet:grid-col-12 homepage-collection-container">-->
+  {% if title|render is not empty %}
+    <h2>{{ title }}</h2>
+  {% endif %}
+  {% if body|render is not empty %}
+    <div class="collection-container-body">
+      {{ body }}
+    </div>
+  {% endif %}
+  <div class="usa-collection">
+    {% for collection in collections %}
+      {{ collection }}
+    {% endfor %}
+  </div>
+</div>

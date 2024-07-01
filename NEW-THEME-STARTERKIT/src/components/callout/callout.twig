@@ -1,0 +1,20 @@
+{%
+  set classes = [
+    'desktop:grid-col-12',
+    'usa-card',
+  ]
+%}
+<ul
+  class="usa-card-group custom-callout">
+  {# set the callout color class, default to gray if not blue #}
+  {% set classes = callout_color == 'blue' ? classes|merge(['custom-callout__blue']) : classes|merge(['custom-callout__gray']) %}
+  {% if media_element %}
+    {# since image exists for paragraph, set flag class #}
+    {% set classes = classes|merge(['usa-card--flag']) %}
+    {# set the media alignment class since image exists. If value isn't right, set to left alignment #}
+    {% set classes = media_location == 'right' ? classes|merge(['usa-card--media-right']) : classes|merge(['usa-card--media-left']) %}
+  {% endif %}
+  <li{{attributes.addClass(classes)}}>
+    {% include "@components/callout/callout--basic.twig" %}
+  </li>
+</ul>

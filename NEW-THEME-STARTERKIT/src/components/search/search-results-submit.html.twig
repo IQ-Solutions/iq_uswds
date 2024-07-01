@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+
+<div class="form-actions">
+  <div class="usa-search--small">
+    <label class="usa-sr-only" for="edit-submit">Search</label>
+    <button{{attributes.addClass('usa-button', 'usa-button--secondary')}}>
+      <img src="{{ uswds_images }}usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search"/>
+    </button>
+  </div>
+</div>

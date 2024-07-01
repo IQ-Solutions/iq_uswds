@@ -1,0 +1,20 @@
+<ul class="usa-collection usa-collection--condensed">
+  {% for item in items %}
+  <li class="usa-collection__item">
+    <div class="usa-collection__body">
+      <h3 class="usa-collection__heading">
+        <a class="usa-link" href="{{ item.url }}">{{ item.title }}</a>
+      </h3>
+      {% if item.meta %}
+      <ul class="usa-collection__meta" aria-label="More information">
+        {% for data in item.meta %}
+        <li class="usa-collection__meta-item position-relative">
+          {{ data.icon }}
+          {{ data.label }}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}

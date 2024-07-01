@@ -1,0 +1,43 @@
+<div class="usa-card__container radius-0">
+  <div class="hide-external-link">
+    {%- if media -%}
+      {%- if url -%}
+        <a href="{{ url }}">
+      {%- endif -%}
+      {%- autoescape false -%}
+        {{ media }}
+      {%- endautoescape -%}
+      {%- if url -%}
+        </a> {# / a #}
+      {%- endif -%}
+    {%- else -%}
+      <div class="usa-card__media">
+        <div class="usa-card__img">
+          <img src="/themes/nia/images/nia_logo_16-9.png" alt="National Institute on Aging" />
+        </div> {# / div.card__img #}
+      </div> {# / div.usa-card__media #}
+    {%- endif -%}
+    {%- block meta_information -%}
+    {%- endblock -%}
+  </div>
+  {%- if title -%}
+    <div class="usa-card__header">
+      <h3 class="usa-card__heading">
+        {%- if url -%}
+          <a href="{{ url }}">
+        {%- endif -%}
+        {{ title }}
+        {%- if url -%}
+          </a> {# / a #}
+        {%- endif -%}
+      </h3> {# / h3.usa-card__heading #}
+    </div> {# / div.usa-card__header hide-external-link #}
+  {%- endif -%}
+  <div class="usa-card__body">
+    {%- block card_body -%}
+      {%- if body_content -%}
+        {{ body_content }}
+      {%- endif -%}
+    {%- endblock -%}
+  </div> {# / div.usa-card__body #}
+</div> {# / div.usa-card__container radius-0 #}
