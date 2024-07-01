@@ -1,0 +1,19 @@
+# Node modules
+node_modules
+
+# Fractal public
+public
+
+# Fractal build
+build
+
+# USWDS assets
+assets/uswds
+assets/css
+assets/img
+
+# VS Code
+*.code-workspace
+
+# macOS
+*.DS_Store

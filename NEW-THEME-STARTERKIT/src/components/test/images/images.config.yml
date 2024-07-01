@@ -1,0 +1,4 @@
+context:
+  image_styles:
+  - name: Name
+    width: 400px

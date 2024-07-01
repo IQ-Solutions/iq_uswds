@@ -1,0 +1,51 @@
+title: Search
+label: Search
+handle: search
+context:
+  uswds_images: /fractal/img/
+  search_form: '@@search--form'
+  attributes:
+    class:
+      - bing-search-form
+      - block_search
+    id: block-bingsearch
+variants:
+  - name: form
+    context:
+      search_form: ''
+      search_textfield: '@@search--textfield'
+      search_button: '@@search--button'
+      attributes:
+        region: secondary_menu
+        id: bing-search-form
+        class:
+          - ally-focus-within
+  - name: textfield
+    context:
+      search_form: ''
+      search_textfield: ''
+      search_button: ''
+      attributes:
+        autocomplete: off
+        placeholder: Search
+        type: text
+        size: 64
+        maxlength: 64
+        class:
+          - search-box__textfield
+          - form-text
+  - name: button
+    context:
+      search_form: ''
+      search_textfield: ''
+      search_button: ''
+      attributes:
+        type: submit
+        id: edit-submit
+        name: op
+        value: Search
+        class:
+          - search-box__button
+          - button
+          - js-form-submit
+          - form-submit

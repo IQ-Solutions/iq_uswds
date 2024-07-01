@@ -1,0 +1,28 @@
+{# THIS FILE WILL BE THE COLLECTION ITSELF #}
+
+{%
+  set classes = [
+    'tablet:grid-col-6',
+    'homepage-collection',
+  ]
+%}
+
+<div{{attributes.addClass(classes)}}>
+<!-- this works w/fractal <div class="tablet:grid-col-6 homepage-collection">-->
+  <h3>{{ title }}</h3>
+  <ul class="usa-collection">
+  {% if body|render is not empty %}
+    <li class="usa-collection__item">
+      <div class="usa-collection__description">{{ body }}</div>
+    </li>
+  {% endif %}
+  {%- block collection_items -%}
+    {% for item in items %}
+      {{ item }}
+    {% endfor %}
+  {%- endblock -%}
+    <li class="usa-collection__item">
+      <a class="usa-button" href="{{ cta_link }}">{{ cta_text }}</a>
+    </li>
+  </ul>
+</div>

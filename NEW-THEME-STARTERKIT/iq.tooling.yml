@@ -1,0 +1,20 @@
+fractal:
+  static_path: fractal
+  themePath: ./
+  project_title: THEMENAME
+  component_path: ./src/components
+  assets_path: ./assets
+  build_path: ./build
+  basePath: ./
+  uswds_path: templates
+  template_path: templates
+  theme_name: THEMENAME
+  port: 3000
+iqTooling:
+  img_dest: ./assets/img
+  img_source: ./src/images/**
+  iq_uswds_path: ../../../../themes/custom/iq_uswds
+uswds:
+  version: 3
+  dist_css_path: ./assets/css
+  dist_theme: ./src/scss

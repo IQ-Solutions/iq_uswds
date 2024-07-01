@@ -1,0 +1,19 @@
+{%
+  set classes = [
+    'tablet:grid-col-12',
+    'news-listing',
+  ]
+%}
+
+<div{{attributes.addClass(classes)}}>
+<!-- this works w/fractal <div class="tablet:grid-col-12 news-listing">-->
+  <h2>Latest News</h2>
+  <ul class="usa-collection">
+    {% for item in items %}
+      {{ item }}
+    {% endfor %}
+  </ul>
+  <div class="news-listing--view-all">
+    <a class="view-all-link" href="/news/all">View all news<i class="fa-solid fa-circle-arrow-right"></i></a>
+  </div>
+</div>

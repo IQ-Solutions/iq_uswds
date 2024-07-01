@@ -1,0 +1,148 @@
+title: Menus
+label: Menus
+context:
+  menu_name: main
+  megamenu: false
+  duplicate_parent: false
+  mega_display_second: false
+  attributes: {}
+  items:
+  - title: Topic 1
+    megamenu_aside: true
+    url: 'javascript:void()'
+    in_active_trail: true
+    below:
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link that's a bit longer than most of the others
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+  - title: Topic 2
+    megamenu_aside: false
+    url: 'javascript:void()'
+    in_active_trail: false
+    below:
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link that's pretty long
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+  - title: Topic 3
+    megamenu_aside: true
+    url: 'javascript:void()'
+    in_active_trail: false
+    below:
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+  - title: Topic 4
+    megamenu_aside: false
+    url: 'javascript:void()'
+    in_active_trail: false
+    below:
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+    - title: Secondary link
+      url: 'javascript:void()'
+      in_active_trail: false
+variants:
+- name: megamenu
+  context:
+    megamenu: true
+- name: secondary
+  context:
+    items:
+    - title: en español
+      url: '/'
+      in_active_trail: false
+      attributes:
+        class:
+          - usa-button
+          - usa-button--secondary
+- name: footer
+  context:
+    footer_style: slim
+- name: regular-footer
+  context:
+    footer_style: medium
+    items:
+    - title: Contact Us
+      megamenu_aside: true
+      url: 'javascript:void()'
+      in_active_trail: true
+    - title: Careers
+      megamenu_aside: true
+      url: 'javascript:void()'
+      in_active_trail: true
+    - title: About This Website
+      megamenu_aside: true
+      url: 'javascript:void()'
+      in_active_trail: true
+    - title: Policies and Notices
+      megamenu_aside: true
+      url: 'javascript:void()'
+      in_active_trail: true
+    - title: Vulnerability Disclosure Policy
+      megamenu_aside: true
+      url: 'javascript:void()'
+      in_active_trail: true
+    - title: FOIA
+      megamenu_aside: true
+      url: 'javascript:void()'
+      in_active_trail: true
+    - title: National Institutes of Health
+      megamenu_aside: true
+      url: 'javascript:void()'
+      in_active_trail: true
+    - title: USA.gov
+      megamenu_aside: true
+      url: 'javascript:void()'
+      in_active_trail: true
+- name: footer-big
+  view: menus--footer.twig
+  context:
+    footer_style: big
+- name: footer-medium
+  view: menus--footer.twig
+  context:
+    footer_style: medium
+- name: sidebar

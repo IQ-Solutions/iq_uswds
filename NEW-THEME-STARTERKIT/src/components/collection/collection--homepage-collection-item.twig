@@ -1,0 +1,28 @@
+{# THIS FILE WILL BE THE COLLECTION ITEM #}
+
+<li
+  class="usa-collection__item collection-item">
+  {{ media }}
+  <div class="usa-collection__body">
+    {% if date|render is not empty or topic|render is not empty %}
+      <ul class="usa-collection__meta" aria-label="More information">
+        {% if date|render is not empty %}
+          <li class="usa-collection__meta-item">
+            {{ date }}
+          </li>
+        {% endif %}
+        {% if topic|render is not empty %}
+          <li class="usa-collection__meta-item">
+            {{ topic }}
+          </li>
+        {% endif %}
+      </ul>
+    {% endif %}
+    <h3 class="usa-collection__heading">
+      <a class="usa-link" href="{{ url }}">{{ title }}</a>
+    </h3>
+    {% if description|render is not empty %}
+      <div class="usa-collection__description">{{ description }}</div>
+    {% endif %}
+  </div>
+</li>

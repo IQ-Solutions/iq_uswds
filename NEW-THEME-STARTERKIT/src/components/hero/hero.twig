@@ -1,0 +1,18 @@
+<section class="usa-hero" aria-label="Introduction">
+  <div class="grid-container">
+    <div class="usa-hero__callout">
+      <h1 class="usa-hero__heading">
+        {%- if callout -%}
+          <span class="usa-hero__heading--alt">{{ callout }}</span>
+        {%- endif -%}
+        {{ title }}
+      </h1>
+      {%- if paragraph -%}
+        <p>{{ paragraph }}</p>
+      {%- endif -%}
+      {%- if button -%}
+        <a class="usa-button" href="{{ button.href }}">{{ button.text }}</a>
+      {%- endif %}
+    </div>
+  </div>
+</section>

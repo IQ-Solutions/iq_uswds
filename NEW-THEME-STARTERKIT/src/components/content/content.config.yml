@@ -1,0 +1,14 @@
+context:
+  attributes: {}
+  page: true
+
+variants:
+- name: node
+  context:
+    display_submitted: false
+    card: '@@card--default'
+    callout_gray_media_left: '@@callout--callout-gray-media-left'
+    blockquote: '@@callout--callout-blockquote'
+- name: card-grid
+  context:
+    card: '@@card--default'

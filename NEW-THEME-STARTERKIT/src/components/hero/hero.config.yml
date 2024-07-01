@@ -1,0 +1,40 @@
+label: Hero
+status: wip
+
+variants:
+- name: default
+  label: default
+  context:
+      callout: "Hero callout:"
+      title: Bring attention to a project priority
+      paragraph: Support the callout with some short explanatory text. You don’t need more than a couple of sentences.
+      button:
+        text: Call to action
+        href: "javascript:void(0)"
+      media: >
+        <div class="usa-card__media">
+        <div class="usa-card__img">
+          <img src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg" alt="A placeholder image">
+        </div>
+        </div>
+- name: homepage
+  label: Homepage Hero
+  context:
+      callout: "Hero callout:"
+      title: Bring attention to a project priority
+      body_content: Support the callout with some short explanatory text. You don’t need more than a couple of sentences.
+      button:
+        text: Call to action
+        href: "javascript:void(0)"
+      media: >
+        <div class="usa-card__media">
+        <div class="usa-card__img">
+          <img src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg" alt="A placeholder image">
+        </div>
+        </div>
+      background: >
+        <div class="usa-card__media">
+        <div class="usa-card__img">
+          <img src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg" alt="A placeholder image">
+        </div>
+        </div>:
