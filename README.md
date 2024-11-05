@@ -1,20 +1,69 @@
-# IQ USWDS
+# USWDS THEME README
+Last Updated: 11-05-2024 
+Company: [IQ Solutions](https://www.iqsolutions.com/) 
+
+>[!NOTE]
+> This document is easier to read in the [GitHub Repo](https://github.com/IQ-Solutions/iq_uswds/blob/main/README.md) as it's a Markdown Document. Go read it there. 
+
+___
+## Contents
+
+- [About](#about)
+  - [Dependencies](#dependencies)
+  - [Decide how you want to approach this tast](#decide-how-you-want-to-approach-this-tast)
+  - [Structure](#structure)
+  - [SASS](#sass)
+- [Local Setup](#local-setup)
+  - [Github Auth Token](#github-auth-token)
+    - [Aquire Token](#aquire-token)
+    - [Add Token to Local](#add-token-to-local)     
+  - [Expected Local Configuration](#expected-local-configuration)
+  - [Set up your local environment](#set-up-your-local-environment)
+  - [Installation of packages](#installation-of-packages)
+  - [Important Node scripts](#important-node-scripts)
+  - [Updating Node Packages](#updating-node-packages)
+  - [Configuration](#configuration)
+  - [Fractal Settings](#fractal-settings)
+  - [IQ Tooling Settings](#iq-tooling-settings)
+
+---
+## About
 This package is meant to serve as the base tooling and architecture for IQ's USWDS site building effort.
 IQ USWDS will install necessary tooling for compiling custom site code and USWDS code as one file, and for using Fractal to build and preview the site.
-## Dependencies
+
+### Dependencies
 * uswds_base
 * components (Optional-- nice to have)
 
-##### Decide how you want to approach this tast
-Think about the project as a whole. Are you only going to be working on this theme and not on any general request that pop up during this build? Or are you going to be building the new theme WHILE maintaining the current site? Due to the length of time needed to build this new theme, you may want to read the  README-ENVIORMET-SETUP.md in this repo to see what you will need to do if you are using one enviorment or two separate enviorments.
+### Decide how you want to approach this tast
+Think about the project as a whole. Are you only going to be working on this theme and not on any general request that pop up during this build? Or are you going to be building the new theme WHILE maintaining the current site? Due to the length of time needed to build this new theme, you may want to read the  [README-ENVIORMET-SETUP.md](https://github.com/IQ-Solutions/iq_uswds/blob/main/README-ENVIORMET-SETUP.md) in this repo to see what you will need to do if you are using one enviorment or two separate enviorments.
 
-## Expected Local Configuration
+### Structure
+Most of your work will be done in the **_src_** directory. In this directory we build/edit components, edit our SASS add theme images and create or edit js. The directory contains the following directories:
+- **_src/components_**: as defined by the USWDS and edited to your themes style guide
+- **_src/images_**: all theme images stored here
+- **_src/js_**: all theme js resides here
+- **_src/scss_**: all SASS resides here
+ 
+You will notice that when you are working in these directories and Fractal is running, that the Fractal window will reload. This is because when Fractal is running, it is watching these directories for file edits. 
+
+### SASS 
+USWDS SASS works differently than what you might be accustomed to. The files structure of the SASS directory is as follows:
+- **_src/scss/RENAME-ME**: houses all custom scss that is specific for the theme. Rename according to your requirments 
+- **_src/scss/_uswds-theme-custom-styles.scss_**: In USWDS terms this is referred as a **SASS Entry Point** and is a location that you can reference any custom SCSS located in the `NIBIB` direcotry described above
+- **_src/scss/_uswds-theme.scss_**: Here we can add any USWDS related settings as defined here: https://designsystem.digital.gov/documentation/settings/
+- **_src/scss/styles.scss_**: This is the file that gets copied after SASS is compiled. In normal cercimstances you shouldn't have to touch this file. 
+
+___
+## Local Setup
 There are the minimum requirements to successfully use IQ USWDS locally:
 * WSL with Ubuntu 20.04 or equivalent.
 * NVM
 * Github Auth Tokens generated and available to your local terminal profile. If you do not have one set up already, follow the instructions below.
 
-##### Github Auth Token
+### Github Auth Token
+#### Aquire Token
+First start off by getting a Github Authentication Token. If you have one already, and stored the key, skip this step.
 * Go to https://github.com/settings/tokens 
 * Click generate new token (use the classic token) 
 * Set the expiration (we don't currently have a recommendation on what it should be) 
@@ -22,28 +71,30 @@ There are the minimum requirements to successfully use IQ USWDS locally:
 * click generate token 
 * **COPY THE TOKEN**. You can only do this once or you will lose it and generate a new one. Make sure to COPY THE TOKEN. 
 
-For the following instructions replace **<auth_token_goes_here>** with your token
+For the following instructions replace <!--auth_token_goes_here--> with your token
 
-##### Add a Git Auth Token to Lando 
+#### Add Token to Local 
+Github Tokens need to be added to your lando/config.yml, and .bashrc files:
 While in a WSL terminal (PC) or a terminal (Mac): 
+In your **~/lando/config.yml**
 * Type in `cd ~/.lando` 
 * Open the config.yml file (use cmd line editor or whatever you want. e.g. `nano config.yml`) 
 * Add the following  
-    ```
-    appEnv: 
-        GITHUB_AUTH_TOKEN: <auth_token_goes_here> 
-            COMPOSER_AUTH: '{"github-oauth": {"github.com": "<auth_token_goes_here>"}}'  
-    ```
+    ```yml
+    appEnv:
+        GITHUB_AUTH_TOKEN: <!--token value here -->
+        COMPOSER_AUTH: '{"github-oauth":{"github.com":"<!--token value here -->"}} 
+    ```  
 * Save and exit the editor
 
-##### Add a Git Auth Token to .bashrc
+In your **~/.bashrc**
 While in a WSL terminal (PC): 
 * Type `cd ~/`
 * `explorer.exe .bashrc`
 * add the following to theh bottom of your .bashrc file
-    ```
-    export GITHUB_AUTH_TOKEN=<auth_token_goes_here>
-    export COMPOSER_AUTH='{"github-oauth": {"github.com": <auth_token_goes_here> "}}’
+    ```bash
+    export GITHUB_AUTH_TOKEN=<!--token value here -->`
+    export COMPOSER_AUTH='{"github-oauth":{"github.com":"<!--token value here -->"}}' 
     ```
 * save the file and close
 * update the .bashrc file by typing 'source ~/.bashrc'
