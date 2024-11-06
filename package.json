@@ -29,7 +29,10 @@
     "build:fractal": "gulp fractal:build",
     "copy:uswds": "gulp uswds:copyAssets",
     "copy:images": "gulp copy:images",
-    "assets:rebase": "gulp uswds:copyAssets && gulp copy:images & gulp uswds:compileSass"
+    "assets:rebase": "gulp uswds:copyAssets && gulp copy:images & gulp uswds:compileSass",
+    "optimize-images": "imagemin 'src/images/*' --out-dir='assets/img'",
+    "theme-package-build": "gulp uswds:copyAssets && imagemin 'src/images/*' --out-dir='assets/img' && gulp uswds:compileSass",
+    "watch": "gulp uswds:watch"
   },
   "repository": {
     "type": "git",
@@ -58,6 +61,7 @@
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "imagemin-cli": "^8.0.0",
     "jshint": "^2.13.6",
     "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
