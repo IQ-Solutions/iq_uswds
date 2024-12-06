@@ -268,7 +268,7 @@ From here you can run `npm run start:fractal` and begin theming.
 
 ### Other Node Scripts
 Use by running `npm run <!--script name goes here-->`:
-* `start:fracal`: this starts Fractal locally, and will host the instance on localhost:
+* `start:fracal`: this starts Fractal locally, and will host the instance on localhost:3000
 * `build:fratal`: Exports all components built in Fractal so that it can be viewed without running Fratal. The url for this is configured in the iq.tooling.yml file.
 * `copy:uswds`: copies all USWDS node package assets from the uswds into the assets/* directory
 * `copy:images`: Copies all theme images located in src/images to the assets/* directory
