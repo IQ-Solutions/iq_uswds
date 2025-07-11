@@ -3,6 +3,10 @@
   "version": "1.8.0",
   "description": "Base IQ USWDS theme for architecture and tooling",
   "main": "index.js",
+  "engines": {
+    "node": ">=22",
+    "npm": ">=11"
+  },
   "browserslist": [
     "last 2 versions",
     "> 1%",
