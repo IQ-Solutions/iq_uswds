@@ -4,7 +4,7 @@ base theme: uswds_base
 name: 'IQ USWDS'
 description: 'IQ Generic USWDS Base Theme'
 package: 'USWDS'
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 logo: 'logo.png'
 screenshot: 'screenshot.png'
 
